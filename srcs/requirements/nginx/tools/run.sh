@@ -1,1 +1,1 @@
-docker run -dp 443:443 nginx_img
+docker run -dp 443:443 nginx

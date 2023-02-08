@@ -1,1 +1,1 @@
-docker build -t nginx_img /home/jchene/Inception/srcs/requirements/nginx/
+docker build -t nginx /home/jchene/Inception/srcs/requirements/nginx/
