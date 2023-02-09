@@ -1,1 +1,1 @@
-docker run -it mariadb
+docker run -it --env-file /home/jchene/Inception/srcs/.env mariadb
