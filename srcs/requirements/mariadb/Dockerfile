@@ -5,7 +5,8 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y mariadb-server
 
 COPY conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
-COPY conf/entrypoint.sh /entrypoint.sh
+COPY conf/init.sql /init.sql
 
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["mysqld_safe"]
+RUN service mysql start && mysql < /init.sql && rm /init.sql
+
+CMD ["mysqld"]

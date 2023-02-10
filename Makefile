@@ -1,4 +1,9 @@
-all:
+all: build up
+
+build: 
+	cd /home/jchene/Inception/srcs && docker compose -f docker-compose.yml build
+
+up:
 	cd /home/jchene/Inception/srcs && docker compose -f docker-compose.yml up
 
 stop:
