@@ -3,7 +3,7 @@ FROM debian:buster
 
 #updating and installing usefull packages
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y nginx curl vim openssl
+RUN apt-get install -y nginx openssl
 
 #configuration of ssl
 RUN mkdir -p /etc/nginx/ssl
