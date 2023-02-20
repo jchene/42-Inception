@@ -1,13 +1,13 @@
 all: build up
 
 build: 
-	cd /home/jchene/Inception/srcs && docker compose -f docker-compose.yml build
+	cd srcs && docker compose -f docker-compose.yml build
 
 up:
-	cd /home/jchene/Inception/srcs && docker compose -f docker-compose.yml up
+	cd srcs && docker compose -f docker-compose.yml up
 
 stop:
-	cd /home/jchene/Inception/srcs && docker compose -f docker-compose.yml down
+	cd srcs && docker compose -f docker-compose.yml down
 
 clean:
 	docker system prune -af
